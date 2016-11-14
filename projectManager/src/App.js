@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import Projects from './components/projects'
+import AddProject from './components/add-project'
 import './App.css';
 
 class App extends Component {
   constructor(){
     super()
     this.state = {
-      projects: [{
+      projects: []
+    }
+  }
+  componentWillMount(){
+    this.setState({projects:[
+      {
         title: "Bussiness Website",
         category: "Web Design"
       },
@@ -18,14 +24,12 @@ class App extends Component {
         title: "E-commerce Shopping Cart",
         category: "Web Design"
       }
-      ]
-    }
+    ]})
   }
-  
   render() {
     return (
       <div className="App">
-        <h1>This is my App</h1>
+        <AddProject />
         <Projects projects={this.state.projects}/>
       </div>
     );
