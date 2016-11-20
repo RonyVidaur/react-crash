@@ -12,7 +12,7 @@ class Projects extends Component {
   }
    return (
       <div className="Projects">
-        <h1>This is my project</h1>
+        <h3>Latest projects</h3>
         {projectItems}
     </div>
     );
